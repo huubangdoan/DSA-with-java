@@ -18,7 +18,7 @@ class algo{
             i--;
         }
     }
-    public static void shiftingLeft(ArrayList<Integer> arr, int pos){
+    public static void delete(ArrayList<Integer> arr, int pos){
         int n=arr.size();        
         for(int i=pos; i<n-1; i++){
             arr.set(i, arr.get(i+1));
@@ -33,8 +33,26 @@ public class Array{
         arr.add(2);
         arr.add(3);
         arr.add(4);
-        //algo.insert(arr, 100, 1);
-        algo.shiftingLeft(arr,1);
+        //insert in the end
+        algo.insert(arr, 100, arr.size());
+
+        //insert in the first
+        algo.insert(arr, 100, 0 );
+
+        //insert in given
+        algo.insert(arr, 100, 1);
+        
+        System.out.println(arr);
+
+        //delete in the end
+        algo.delete(arr, arr.size()-1);
+
+        //delete in the first
+        algo.delete(arr, 0);
+
+        //delete in given
+        algo.delete(arr, 2);
+
         System.out.println(arr);
     }
 }
